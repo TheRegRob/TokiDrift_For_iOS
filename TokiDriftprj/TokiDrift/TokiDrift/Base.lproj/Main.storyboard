@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kdO-si-UFc">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Favorites Page-->
+        <scene sceneID="QkW-it-tLw">
+            <objects>
+                <viewController storyboardIdentifier="ID_FavoritePage" id="vhy-Ow-SjN" customClass="FavoritesPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="b70-VG-LGM">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="szi-qc-ppb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="Hxq-Jq-cV4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FQE-R4-y5l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="551"/>
+        </scene>
+        <!--Riepilogo-->
+        <scene sceneID="DUj-0V-cjW">
+            <objects>
+                <viewController storyboardIdentifier="ID_DatiOrdini" id="AfT-aA-gPA" customClass="RiepilogoPage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rlx-R8-kJf">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="inv-IG-hb4"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Riepilogo" image="RiepilogoIcon" id="2zP-Lz-07T"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rLf-sM-f5D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2602" y="171"/>
+        </scene>
+        <!--More Page-->
+        <scene sceneID="ZYi-wJ-GDu">
+            <objects>
+                <viewController storyboardIdentifier="ID_MorePage" id="Fxd-Do-4cq" customClass="MorePage" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m7Z-UG-gkS">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="C6s-kG-5SC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="R0t-QS-u4i"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omy-aR-QKK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="731"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="p8d-wt-gLA">
+            <objects>
+                <tabBarController storyboardIdentifier="ID_TabHub" id="8E7-ra-U9P" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="far-ze-k6n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="qxU-a8-dZZ"/>
+                        <segue destination="42G-YD-U2R" kind="relationship" relationship="viewControllers" id="owZ-uk-xjs"/>
+                        <segue destination="vhy-Ow-SjN" kind="relationship" relationship="viewControllers" id="vEa-4q-WEJ"/>
+                        <segue destination="Fxd-Do-4cq" kind="relationship" relationship="viewControllers" id="UBs-6J-OHZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wp1-ru-fGk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82" y="227"/>
+        </scene>
+        <!--Riepilogo piatti-->
+        <scene sceneID="6SF-Tz-2gR">
+            <objects>
+                <viewController storyboardIdentifier="ID_RiepilogoPage" title="Riepilogo piatti" id="42G-YD-U2R" customClass="RiepilogoPage" customModule="TokiDrift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Quo-Pk-Ivo">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="L8r-Ue-rVB">
+                                <rect key="frame" x="0.0" y="44" width="390" height="717"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="Kta-oo-Jjf">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Kta-oo-Jjf" id="Esk-MU-aaJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T1V-9R-xBL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="L8r-Ue-rVB" firstAttribute="top" secondItem="T1V-9R-xBL" secondAttribute="top" id="8Fg-1S-HJD"/>
+                            <constraint firstItem="T1V-9R-xBL" firstAttribute="bottom" secondItem="L8r-Ue-rVB" secondAttribute="bottom" id="D5l-o4-wqI"/>
+                            <constraint firstItem="L8r-Ue-rVB" firstAttribute="leading" secondItem="T1V-9R-xBL" secondAttribute="leading" id="PvA-L7-8CV"/>
+                            <constraint firstItem="T1V-9R-xBL" firstAttribute="trailing" secondItem="L8r-Ue-rVB" secondAttribute="trailing" id="WDc-oE-E24"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Riepilogo" image="RiepilogoIcon" id="AOR-5h-hQg"/>
+                    <connections>
+                        <outlet property="tableView" destination="L8r-Ue-rVB" id="RBe-Ej-MnZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="so1-MG-Jwq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1017" y="-591"/>
+        </scene>
+        <!--MenuPage-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ID_MenuPage" id="BYZ-38-t0r" userLabel="MenuPage" customClass="MenuPage" customModule="TokiDrift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTj-2n-oZ2">
+                                <rect key="frame" x="25" y="435" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Woq-Rg-uJS">
+                                <rect key="frame" x="15" y="140" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="▲">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Inc1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jM9-3W-Nfr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEq-CT-lfm">
+                                <rect key="frame" x="15" y="202" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▼">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Dec1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7yz-X3-Qrx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5q7-GB-X1e">
+                                <rect key="frame" x="15" y="281" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▲">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Inc2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFg-tf-SJp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLp-gY-Z01">
+                                <rect key="frame" x="15" y="343" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▼">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Dec2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0eb-Hk-tI5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gnc-9U-HP5">
+                                <rect key="frame" x="15" y="547" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▲">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Inc4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Whc-0p-Ues"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-Ze-nQq">
+                                <rect key="frame" x="16" y="609" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▼">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Dec4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uuH-xn-bPK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAl-dP-xbn">
+                                <rect key="frame" x="15" y="397" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▲">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Inc3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qvy-3D-yZq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y8W-c1-uSa">
+                                <rect key="frame" x="16" y="459" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="▼">
+                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="bt_Dec3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y8M-82-XeS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nDw-dK-aAe">
+                                <rect key="frame" x="25" y="177" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1i-L3-yNM">
+                                <rect key="frame" x="25" y="319" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOP-fw-eGq">
+                                <rect key="frame" x="25" y="585" width="11" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qiB-Z8-4Fv">
+                                <rect key="frame" x="75" y="245" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Menu" image="NigiriIcon" id="xgb-1A-518"/>
+                    <connections>
+                        <outlet property="lbl_Qnt1" destination="nDw-dK-aAe" id="1d2-1Q-Tv7"/>
+                        <outlet property="lbl_Qnt2" destination="f1i-L3-yNM" id="a1I-0a-0xh"/>
+                        <outlet property="lbl_Qnt3" destination="ZTj-2n-oZ2" id="yFB-4T-5oN"/>
+                        <outlet property="lbl_Qnt4" destination="IOP-fw-eGq" id="edm-fr-0S2"/>
+                        <outlet property="pb_BackGround" destination="qiB-Z8-4Fv" id="4Ak-xk-INc"/>
+                        <outlet property="tst_Dw1" destination="eEq-CT-lfm" id="sxD-Fu-Amo"/>
+                        <outlet property="tst_Dw2" destination="fLp-gY-Z01" id="e8Z-zg-RFM"/>
+                        <outlet property="tst_Dw3" destination="y8W-c1-uSa" id="e8r-pC-WQ0"/>
+                        <outlet property="tst_Dw4" destination="ewP-Ze-nQq" id="oDh-tl-4Iw"/>
+                        <outlet property="tst_Up1" destination="Woq-Rg-uJS" id="WMg-US-qgw"/>
+                        <outlet property="tst_Up2" destination="5q7-GB-X1e" id="i9g-b4-xch"/>
+                        <outlet property="tst_Up3" destination="kAl-dP-xbn" id="wR4-DX-gWx"/>
+                        <outlet property="tst_Up4" destination="gnc-9U-HP5" id="Who-fs-xnC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="-188"/>
+        </scene>
+        <!--ChooseMenu-->
+        <scene sceneID="w3j-Ce-xqz">
+            <objects>
+                <viewController title="ChooseMenu" id="kdO-si-UFc" userLabel="ChooseMenu" customClass="ChooseMenu" customModule="TokiDrift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3mW-Re-CDg">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="0Bc-S0-djv">
+                                <rect key="frame" x="55" y="379" width="280" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="0.0">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Menu del pranzo">
+                                            <attributes>
+                                                <font key="NSFont" size="41" name="AppleSymbols"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="TouchBtn:" destination="kdO-si-UFc" eventType="touchDown" id="nUO-Eq-bMg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" role="primary" translatesAutoresizingMaskIntoConstraints="NO" id="PSC-HD-RLC">
+                                <rect key="frame" x="55" y="566" width="280" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
+                                    <backgroundConfiguration key="background" strokeWidth="0.0">
+                                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    </backgroundConfiguration>
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Menu della cena">
+                                            <attributes>
+                                                <font key="NSFont" size="41" name="AppleSymbols"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="TouchBtn:" destination="kdO-si-UFc" eventType="touchDown" id="AsN-tQ-jID"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="03N-FA-KFV">
+                                <rect key="frame" x="223" y="684" width="94" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="toki-logo" translatesAutoresizingMaskIntoConstraints="NO" id="e8S-gd-bsA">
+                                <rect key="frame" x="26" y="98" width="339" height="203"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59709520209936207" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aMK-fy-jMY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EYg-cK-QHx"/>
+                    <connections>
+                        <outlet property="ChooseBar" destination="EYg-cK-QHx" id="lcu-ET-woP"/>
+                        <outlet property="DinnerButton" destination="PSC-HD-RLC" id="1NZ-fU-XVr"/>
+                        <outlet property="LunchButton" destination="0Bc-S0-djv" id="5o4-fw-HDh"/>
+                        <outlet property="pb_BackGround2" destination="03N-FA-KFV" id="1wO-DE-Ebu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKK-uX-NuP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-766" y="227"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NigiriIcon" width="25" height="25"/>
+        <image name="RiepilogoIcon" width="25" height="25"/>
+        <image name="toki-logo" width="360" height="205"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
